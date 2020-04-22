@@ -26,7 +26,7 @@ pub const Keyboard = struct {
             .model = null,
             .layout = null,
             .variant = null,
-            .options = null,
+            .options = "caps:swapescape",
         };
         const context = c.xkb_context_new(c.enum_xkb_context_flags.XKB_CONTEXT_NO_FLAGS) orelse
             return error.CantCreateXkbContext;
