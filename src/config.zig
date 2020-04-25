@@ -47,6 +47,14 @@ pub const Config = struct {
             .arg = .{ .str = "alacritty" },
         });
 
+        // Mod+d to start the program launcher
+        try self.keybinds.append(Keybind{
+            .keysym = c.XKB_KEY_d,
+            .modifiers = mod,
+            .command = command.spawn,
+            .arg = .{ .str = "launcher.sh" },
+        });
+
         // Mod+Q to close the focused view
         try self.keybinds.append(Keybind{
             .keysym = c.XKB_KEY_q,
