@@ -31,8 +31,8 @@ pub fn init(self: *Self, view: *View, wlr_xdg_surface: *c.wlr_xdg_surface) void 
 
     // Inform the xdg toplevel that it is tiled.
     // For example this prevents firefox from drawing shadows around itself
-    _ = c.wlr_xdg_toplevel_set_tiled(self.wlr_xdg_surface, c.WLR_EDGE_LEFT |
-        c.WLR_EDGE_RIGHT | c.WLR_EDGE_TOP | c.WLR_EDGE_BOTTOM);
+    //_ = c.wlr_xdg_toplevel_set_tiled(self.wlr_xdg_surface, c.WLR_EDGE_LEFT |
+    //    c.WLR_EDGE_RIGHT | c.WLR_EDGE_TOP | c.WLR_EDGE_BOTTOM);
 
     // Add listeners that are active over the view's entire lifetime
     self.listen_destroy.notify = handleDestroy;
